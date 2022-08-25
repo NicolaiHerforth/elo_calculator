@@ -1,10 +1,9 @@
-# Python 3 program for Elo Rating
 import math
 import random 
 import time
 from typing import Literal
 
-# Function to calculate the Probability
+
 def Probability(team_1_rating: int, team_2_rating:int) -> float:
     """Calculates the probability of team_2 winning
     
@@ -17,11 +16,6 @@ def Probability(team_1_rating: int, team_2_rating:int) -> float:
  
     return 1.0 * 1.0 / (1 + 1.0 * math.pow(10, 1.0 * (team_1_rating - team_2_rating) / 400))
  
- 
-# Function to calculate Elo rating
-# K is a constant.
-# d determines whether
-# Player A wins or Player B.
 def EloRating(rating_team_a: int, rating_team_b:int, winner: Literal[1,0], K: int = 30, ):
     """
     Calculates elo rating rating_team_a and rating_team_b. 
